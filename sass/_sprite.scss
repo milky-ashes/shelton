@@ -1,0 +1,82 @@
+$icon-sprite-dimensions: true;
+@import "icon/*.png";
+@import "icon2x/*.png";
+
+$icons: sprite-map("icon/*.png", $layout: smart);
+$icons-2x: sprite-map("icon2x/*.png", $layout: smart);
+
+
+
+
+
+.slider-header .logo span{
+  @include use-sprite(logo-top);
+  margin: 0 auto;    
+  display: block;
+  margin-bottom: 14px;
+}
+
+.hero-carousel-nav .next a{
+  @include use-sprite(arrow-right);
+}
+
+.hero-carousel-nav .prev a{
+  @include use-sprite(arrow-left);
+}
+
+a.blog{
+  @include use-sprite(blog);
+}
+
+a.facebook{
+  @include use-sprite(facebook);
+}
+
+a.twitter{
+  @include use-sprite(twitter);   
+}
+
+.foot-logo{
+  @include use-sprite(logo-foot);
+}
+
+a.logo-link{
+  @include use-sprite(logo-small);
+}
+
+a.shared-link:after{
+   @include use-sprite(plus);
+  display: inline-block;
+  margin-right: -5px; 
+  content: "";
+  vertical-align: top;
+  line-height: 29px;
+  margin-left: 10px;
+}
+
+.feature-list li.usa-flag:before{
+  @include use-sprite(usa);
+}
+
+.feature-list li.it-flag:before{
+  @include use-sprite(it);
+}
+
+ul.origin-list li:before{
+  @include use-sprite(dot);
+}
+
+.basket-button:after{
+  @include use-sprite(card); 
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  content: "";
+}
+
+span.signature{  
+  @include use-sprite(signature); 
+  display: inline-block;
+  position: relative;
+}

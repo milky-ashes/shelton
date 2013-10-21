@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,800|Raleway:400,300,600,900);
+@import 'compass';
+@import 'compass/css3';
+@import 'compass/reset';
+
+@import '_mixins';
+@import '_variables';
+@import '_sprite';
+
+@import '_layout';
+@import '_typography';
+@import '_header';
+@import '_slider';
+@import '_blog_part';
+@import '_category';
+@import '_product';
+@import '_prefooter';
+@import '_footer';
+
+@import '_draft'; //remove this styles

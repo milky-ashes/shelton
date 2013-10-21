@@ -1,0 +1,26 @@
+footer#footer{
+  background: $bg-grey;
+  padding: $padding-footer;
+  height: $footer-height;
+  @include box-sizing(border-box);
+  font-size: $px11;
+  line-height: 1.455em;
+  
+  .foot-logo{
+    display: inline-block;
+    color: transparent;
+    margin-bottom: 30px;
+  }
+  
+  b{
+    font-size: 1.091em;
+  }
+  
+  .contact-info{
+    padding-bottom: 25px;
+  }
+  
+  a{
+    color: $text-grey;
+  }
+}

@@ -1,0 +1,61 @@
+.prefooter{
+  padding-top: 60px;
+  
+  .prefooter-part{
+    border-bottom: 1px solid $border-grey;
+    padding: $padding-prefooter;
+    
+    &:last-child{
+      border-bottom: 0;
+    }
+    
+    .big-text{
+      font: {
+        size: $px30;
+        family: $font-raleway;
+        weight: $font-normal;
+      }
+      color: $text-black;
+      margin-bottom: 15px;
+    }
+    
+    .middle-text{
+      font: {
+        size: $px26;
+        family: $font-raleway;
+        weight: $font-normal;
+      }
+      color: $text-black;
+      margin-bottom: 10px;
+    }
+    
+    .email-form{
+      padding-top: 5px;
+      
+      input[type=email]{
+        width: 175px;
+        height: 30px;
+        line-height: 30px;
+        @include box-sizing(border-box);
+        padding: 0 5px;
+        border: 0;
+        background: $input-grey;
+      }
+    }
+    
+    ul.social-list{
+      padding-top: 30px;
+      li{
+        display: inline;
+        padding: 0 8px;
+         a{
+          display: inline-block;
+          
+          &:hover{
+            @include opacity(0.8);
+          }
+        }
+      } 
+    }
+  }
+}

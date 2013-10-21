@@ -1,0 +1,55 @@
+@mixin use-sprite($sprite) {
+    background-image: sprite-url($icons);
+    background-position: sprite-position($icons, $sprite);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: image-height(sprite-file($icons, $sprite));
+    width: image-width(sprite-file($icons, $sprite));
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 2) {
+        background-image: sprite-url($icons-2x);
+        background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+        background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+        height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+        width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+    }
+}
+
+//mixin for triangle 
+@mixin triangle($direction, $color, $size){
+  
+  @if $direction == "left"{
+    border-bottom: $size outset transparent;
+    border-right: $size solid $color;
+    border-top: $size outset transparent;
+    border-left: $size outset transparent;
+  }
+  
+  @else if $direction == "right"{
+    border-bottom: $size outset transparent;
+    border-left: $size solid $color;
+    border-top: $size outset transparent;
+    border-right: $size outset transparent;
+  }
+  
+  @else if $direction == "up"{
+    border-bottom: $size solid $color;
+    border-left: $size outset transparent;
+    border-right: $size outset transparent;
+    border-up: $size outset transparent;
+  }
+  
+  @else if $direction == "down"{
+    border-right: $size outset transparent;
+    border-left: $size outset transparent;
+    border-top: $size solid $color;
+    border-down: $size outset transparent;
+  }
+  
+  height: 0;
+  width: 0;
+  display: block;
+  content: '';
+  position: absolute;
+}

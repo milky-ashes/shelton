@@ -1,0 +1,260 @@
+.slider-header{
+  position: absolute;
+  width:100%;
+  left: 0;
+  top: 22px;
+  z-index: 150;
+  
+  .logo{
+    width: 322px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    color: transparent;
+    margin-bottom: 14px;
+  }
+  nav{
+    a{
+      font:{
+        weight: $font-normal;
+        size: $px16;
+        family: $font-raleway;
+      }
+      color: $text-link-dark;
+      margin: 0 9px;
+    } 
+  }
+}
+
+.fixed-header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid $border-nav;
+  background: $bg-white;
+  @include box-sizing(border-box);
+  z-index: 10;
+  
+  .base-part{
+      padding: 18px 0 15px;
+  }
+  .logo-link{
+    display: block;
+    color: transparent;
+    float: left;
+  }
+  
+  nav{
+    padding-top: 8px;
+    position: relative;
+    a{
+      color: $text-nav;
+      margin-left: 15px;
+      position: relative;
+      font:{
+        size: $px16;
+        family: $font-raleway;
+        weight: $font-normal;        
+      }
+      
+      &.active{
+        color: $text-black;
+        
+        &:after{
+          @include triangle(up,#f8f8f8, 8px);
+         bottom: -22px;
+         left: 50%;
+         margin-left: -4px;
+        }
+      }
+    }
+    ul.enter-list{
+      display: none;
+      position: absolute;
+      right: 81px;
+      top: 0;
+      padding: 8px 20px 20px;
+      border: 1px solid #acacac;
+      background: #f1f1f1;
+      
+      li{
+        display: block;
+        margin-bottom: 10px;
+        a{
+          margin: 0;
+          color: #000000;
+        }
+        &:first-child{
+          margin-bottom: 25px;
+        }
+        &:last-child{
+          margin: 0;
+        }
+      }
+      
+      &.open{
+        display: block;
+      }
+    }
+    .basket-menu{
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: 1px solid #acacac;
+      background: #f1f1f1;
+      padding: 15px 9px 9px;
+      width: 381px;
+      
+      .top-basket{
+        text-align:right;
+        font:{
+          size: $px16;
+          family: $font-raleway;
+        }
+        color: #000000;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dedede;
+      }
+      
+      &.open{
+        display: block;
+      }
+      
+      .item-basket{
+        border-bottom: 1px solid #dedede;
+        padding: 8px 0 13px;
+        position: relative;
+        
+        .item-price{
+          position: absolute;
+          right: 0;
+          top: 9px;
+          font-size: 13px;
+          font-weight: $font-bold;
+          color: #000000;
+        }
+        
+        .img-part{
+          margin-top: 6px;
+        }
+        
+        img{
+          display: block;
+          width:69px;
+          height: 69px;
+          border: 1px solid #e7e7e7;
+        }
+        
+        .item-info{
+          margin-left: 83px;
+          font-size: 12px;
+          
+          span.item-name{
+            font-size: 13px;
+            color: #000000;
+            font-weight: bold;
+          }
+          
+          dl dt{
+            font-size: 12px;
+            display: block;
+            float: left;
+            color: #000000;
+            margin-right: 5px;
+            font-weight: bold;
+            line-height: 1.417em; 
+          }
+          
+          dl dd{
+            display: block;
+            font-size: 12px;
+            line-height: 1.417em; 
+          }
+        }
+      }
+      .bottom-basket{
+        padding-top: 12px;
+        
+        a.button{
+          font-size: 14px;
+          font-weight: $font-semibold;
+          margin-left: 12px;
+          padding: 0 17px;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+.categories-block{
+    background: $border-nav;
+    line-height: 18px;
+    font:{
+      size: $px13;
+      family: $font-raleway;
+    }
+    color: $text-dark;
+    margin-bottom: 35px;
+    
+    
+       .blog-cat{
+         height: 54px;
+         
+         p{
+           height: 54px;
+           
+           &.right{
+            width: 800px;
+          }
+          
+          a{
+            color: $text-grey;
+          }
+         }
+         
+       }
+       
+     p{
+       display: table-cell;
+       height: 70px;
+       vertical-align: middle;
+       width: 600px;
+       float: none;
+       
+       span{
+           font-weight: $font-bold;
+           text-transform: uppercase;
+         }
+       
+       &.right{
+         text-align: right;
+       
+       }
+       
+     }
+    a{
+      margin-left: 20px;
+      position: relative;
+      
+      &.active{
+        color: #000000!important;
+      }
+      
+      &.active:after{
+        @include triangle(up, #ffffff,8px);
+        bottom: -18px;
+        left: 50%;
+        margin-left: -4px;
+      }
+    }
+ 
+} 
+.popup-overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

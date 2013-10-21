@@ -1,0 +1,202 @@
+a, input, textarea{
+  outline: none;
+}
+
+a{
+  color: $text-blue;
+  text-decoration: none;
+  
+  &:hover{
+    text-decoration: underline;
+  }
+  
+  &.shared-link{
+    @extend .button;
+    background: $bg-button-grey;
+    color: $text-black;
+    position: relative;
+    height: 29px;
+    line-height: 29px;
+  }
+}
+
+.button{
+  display: inline-block;
+  border: none;
+  font:{
+    family: $font-raleway;
+    size: $px11;
+    weight: $font-extrabold;
+  }
+  text-transform: uppercase;
+  height: $button-height;
+  line-height: $button-height;
+  padding: 0 6px;
+  cursor: pointer;
+      
+  &:hover{
+      text-decoration: none;
+    }
+  
+  
+  &.black-button{
+    color: $text-white;
+    background: $bg-button; 
+    
+    &:hover{
+      background: $bg-button + 66;
+    }
+    
+  }
+  &.big-button{
+    height: $big-button-height;
+    line-height: $big-button-height;
+    padding: 0 20px;
+    font-size: $px22;    
+  }
+  
+  &.middle-button{
+    height: 46px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: $px16;
+  }
+  
+  &.basket-button{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  &.grey-button{
+    background: $bg-button-grey;
+    color: $text-black;
+    
+    &:hover{
+      background: $bg-button-grey - 22;
+    }
+  }
+}
+
+h1{
+  font:{
+    family: $font-raleway;
+    weight: $font-normal;
+    size: $px34;
+  }
+  line-height: 1em;
+  margin-bottom: 35px;
+  color: $text-dark;
+}
+
+h2{
+  font:{
+    family: $font-raleway;
+    weight: $font-normal;
+    size: $px30;
+  }
+  line-height: 1em;
+  color: $text-black;
+  margin-bottom: 35px;
+}
+
+h3{
+  font:{
+    family: $font-raleway;
+    weight: $font-normal;
+    size: $px24;
+  }
+  line-height: 1em;
+  color: $text-black;
+}
+h4{
+  font:{
+    family: $font-raleway;
+    weight: $font-normal;
+    size: $px18;
+  }
+  line-height: 1em;
+  color: $text-black;
+  margin-bottom: 15px;
+}
+
+b, em{
+  font-weight: $font-bold;
+}
+
+.text-block p, .text-block ul{
+  margin-bottom: 10px;
+}
+
+ul.origin-list{
+  padding-left: 20px;
+  
+  li{
+    position: relative;
+    &:before{
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      content: "";
+    }
+  }
+}
+
+.text-block{
+  img{
+    border: 1px solid $bg-button-grey;
+    display: block;
+  }
+}
+
+form.feedback-form{
+  .form-part{
+    overflow: hidden;
+    padding-bottom: 10px;
+    
+    label{
+      display: block;
+      float: left;
+      width: 100px;
+      padding-right: 10px;
+      line-height: 41px;
+      color: #000000;
+      font:{
+        size: $px18;
+        family: $font-raleway;
+      }
+      text-align: right;
+    }
+    
+    .base-input{
+      margin-left: 105px;
+      @include box-sizing(border-box);
+      width: 450px;
+      height: 41px;
+      border: 1px solid #eaeaea;
+      @include border-radius(2px);
+      display: block;
+      padding: 0 10px;
+    }
+    
+    textarea.base-input{
+      width: 450px;
+      max-width: 450px;
+      min-width: 450px;
+      height: 191px;
+      max-height: 191px;
+      min-height: 191px;
+      padding: 10px;
+      overflow: auto;
+    }
+    input[type=submit]{
+      margin-left:110px;
+      height:46px;
+      line-height: 46px;
+      padding: 0 40px;
+      font-size: 16px;
+    }
+  }
+}
