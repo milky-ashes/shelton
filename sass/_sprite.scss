@@ -53,6 +53,7 @@ a.shared-link:after{
   line-height: 29px;
   margin-left: 10px;
 }
+// for flags
 
 .feature-list li.usa-flag:before{
   @include use-sprite(usa);
@@ -62,17 +63,45 @@ a.shared-link:after{
   @include use-sprite(it);
 }
 
-ul.origin-list li:before{
-  @include use-sprite(dot);
+.feature-list li.gb-flag:before{
+  @include use-sprite(uk);
 }
 
-.basket-button:after{
-  @include use-sprite(card); 
-  display: block;
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  content: "";
+.feature-list li.ch-flag:before{
+  @include use-sprite(swiss);
+}
+
+.feature-list li.es-flag:before{
+  @include use-sprite(sp);
+}
+
+.feature-list li.pt-flag:before{
+  @include use-sprite(port);
+}
+
+.feature-list li.jp-flag:before{
+  @include use-sprite(jp);
+}
+
+.feature-list li.ie-flag:before{
+  @include use-sprite(ir);
+}
+
+.feature-list li.de-flag:before{
+  @include use-sprite(ger);
+}
+
+.feature-list li.fr-flag:before{
+  @include use-sprite(fr);
+}
+
+.feature-list li.ca-flag:before{
+  @include use-sprite(can);
+}
+// ends style for flags
+
+ul.origin-list li:before{
+  @include use-sprite(dot);
 }
 
 span.signature{  

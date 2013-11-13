@@ -1,6 +1,10 @@
 .product-section{
   padding-bottom: 50px;
   
+  h1{
+    font-size: $px32;
+  }
+  
   .grey-part{
     color: #7c7b7b;
     padding: 18px 20px 14px;
@@ -18,6 +22,7 @@
       color: #949494;
       margin-bottom: 10px;
       position: relative;
+      font-size: 13px;
       
       &:before{
         display: block;
@@ -101,6 +106,12 @@
       family: $font-raleway;
     }
     cursor: pointer;
+    
+    i{
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+    }
     
   
     &:after{

@@ -5,4 +5,26 @@
 
 
 
+/*some fixes 06.11.2013*/
+body{
+overflow: visible;}
+footer#footer, .hero, .blog-section.grey-part, .categories-block{
+min-width: 1200px;}
+.container{
+min-width: 1200px;
+width:1200px;
+padding:0 100px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;}
+.container-1200{
+  min-width: 1190px;
+}
+.container.top-block{
+  padding-top: 80px;
+}
+@media screen and (max-width: 640px) {
+  .hero, .slider-header{
+    display: none;
+  }
 
+}
